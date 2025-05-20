@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   messageTemplate: string = 'Hola {nombre}, te escribo para...';
   showCopyNotification = false;
   highlightedRowId: number | null = null;
+  selectedFileName: string = '';
 
   newContact: Contact = {
     name: '',
@@ -175,6 +176,14 @@ export class AppComponent implements OnInit {
         });
       };
       reader.readAsArrayBuffer(file);
+    }
+  }
+
+  clearFile(): void {
+    this.selectedFileName = '';
+    const fileInput = document.getElementById('importFile') as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = '';
     }
   }
 

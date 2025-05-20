@@ -4,7 +4,7 @@
     <!-- Columna izquierda (30%) -->
     <div class="left-column">
       <div class="card">
-        <h2>Agregar Contacto</h2>
+        <h2>AGREGAR CONTACTO</h2>
         <div class="form-group">
           <label for="name">Nombre:</label>
           <input type="text" id="name" class="form-control" [(ngModel)]="newContact.name"
@@ -19,21 +19,23 @@
       </div>
 
       <div class="card mt-3">
-        <h2>Importar/Exportar</h2>
+        <h2>IMPORTAR/EXPORTAR</h2>
         <div class="form-group">
           <label for="importFile">Importar Excel (nombre, teléfono):</label>
           <input type="file" id="importFile" class="form-control"
                  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                  (change)="importExcel($event)">
         </div>
-        <button class="btn btn-secondary btn-block" (click)="exportContacts()">Exportar Formato</button>
+        <button class="btn btn-secondary btn-block" (click)="exportContacts()">Exportar Formato De Excel</button>
       </div>
+
+
     </div>
 
     <!-- Columna derecha (70%) -->
     <div class="right-column">
       <div class="card">
-        <h2>Mensaje Plantilla</h2>
+        <h2>MENSAJE PLANTILLA</h2>
         <div class="form-group">
     <textarea id="messageTemplate"
               class="form-control"
@@ -50,7 +52,7 @@
 
       <div class="card mt-3">
         <div class="header-row">
-          <h2>Lista de Contactos ({{ contacts.length }})</h2>
+          <h2>LISTA DE CONTACTOS ({{ contacts.length }})</h2>
           <button class="btn btn-danger" [disabled]="contacts.length === 0" (click)="clearAll()">Limpiar Todo</button>
         </div>
 
@@ -73,14 +75,19 @@
                 </span>
             </td>
             <td class="actions">
-              <button class="btn btn-primary btn-sm" (click)="sendMessage(contact)">Enviar</button>
-              <button class="btn btn-outline-secondary btn-sm" (click)="sendViaWeb(contact)">Web</button>
-              <button class="btn btn-danger btn-sm" (click)="removeContact(contact.id || 0)">Eliminar</button>
+              <button class="btn btn-primary btn-sm" (click)="sendMessage(contact)" title="Enviar por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </button>
+              <button class="btn btn-outline-secondary btn-sm" (click)="sendViaWeb(contact)" title="Abrir en web">
+                <i class="fas fa-globe"></i>
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="removeContact(contact.id || 0)" title="Eliminar">
+                <i class="fas fa-trash-alt"></i>
+              </button>
               <button class="btn btn-outline-info btn-sm tooltip-container" (click)="copyMessage(contact)">
-                📋
+                <i class="fas fa-paste"></i> <!-- Icono de pegar -->
                 <span class="tooltip-text">Copiar mensaje para {{ contact.name }}</span>
               </button>
-
             </td>
           </tr>
           </tbody>
