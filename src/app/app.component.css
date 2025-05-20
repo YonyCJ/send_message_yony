@@ -1,0 +1,384 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #128C7E;
+  margin-bottom: 30px;
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 0 0 30%;
+}
+
+.right-column {
+  flex: 0 0 70%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #128C7E;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0d6d62;
+}
+
+.btn-secondary {
+  background-color: #34B7F1;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #2a92c1;
+}
+
+.btn-danger {
+  background-color: #FF3B30;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #d9302c;
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 1px solid #34B7F1;
+  color: #34B7F1;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f0f8ff;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.contacts-table th {
+  background-color: #f8f8f8;
+  color: #075E54;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.badge-success {
+  background-color: #25D366;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #FFC107;
+  color: black;
+}
+
+.empty-list {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+}
+
+
+.app-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1600px; /* o el ancho máximo que prefieras */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Reset básico para ocupar toda la pantalla */
+html, body, .full-screen-app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.full-screen-app {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app-header {
+  background-color: #128C7E;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.right-column {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+/* Ajustes para las tarjetas */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* Eliminamos el margin-bottom y usamos gap del contenedor */
+}
+
+/* Ajuste para la tabla de contactos */
+.contacts-table-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contacts-table {
+  width: 100%;
+  /* ... (resto de estilos de tabla igual que antes) ... */
+}
+
+/* Ajustes para el textarea del mensaje */
+.message-template-container {
+  flex: 0 0 auto;
+}
+
+/* ... (el resto de tus estilos permanecen igual) ... */
+
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  min-width: 100px;
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px 10px;
+  position: absolute;
+  z-index: 1000;
+
+  /* Posicionamiento a la derecha */
+  top: 50%;
+  left: 100%;
+  margin-left: 10px; /* Espacio entre el botón y el tooltip */
+  transform: translateY(-50%) translateX(10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Flecha del tooltip (ahora apunta a la izquierda) */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* Cambiado de left a right */
+  margin-top: -6px; /* Centra verticalmente la flecha */
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #2c3e50 transparent transparent; /* Flecha apuntando a la izquierda */
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+
+
+/*NOTIFICACION*/
+
+.copy-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeInOut 2s ease-in-out;
+  z-index: 1000;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+
+
+/*RESALTAR FILA*/
+.highlight-row {
+  background-color: rgba(25, 118, 210, 0.08) !important;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.highlight-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #1976d2;
+  transition: width 0.2s ease;
+}
+
+.highlight-row:hover {
+  background-color: rgba(25, 118, 210, 0.12) !important;
+}
+
+.highlight-row:hover::after {
+  width: 4px;
+}
+
+
+/*Efecto hover en las tablas*/
+.contacts-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.contacts-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}

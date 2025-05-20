@@ -215,6 +215,6 @@ export class AppComponent implements OnInit {
     this.messageTemplate = newTemplate;
     this.saveTemplate();
   }
-
+  
 
 }
