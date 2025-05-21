@@ -225,5 +225,9 @@ export class AppComponent implements OnInit {
     this.saveTemplate();
   }
 
+  toggleSent(contact: any): void {
+    // Invertir el estado de "sent" para el contacto
+    contact.sent = !contact.sent;
+  }
 
 }

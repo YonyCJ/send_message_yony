@@ -28,8 +28,6 @@
         </div>
         <button class="btn btn-secondary btn-block" (click)="exportContacts()">Exportar Formato De Excel</button>
       </div>
-
-
     </div>
 
     <!-- Columna derecha (70%) -->
@@ -62,6 +60,7 @@
             <th>Nombre</th>
             <th>Teléfono</th>
             <th>Estado</th>
+            <th>Enviado</th>
             <th>Acciones</th>
           </tr>
           </thead>
@@ -73,6 +72,9 @@
                 <span [class]="contact.sent ? 'badge badge-success' : 'badge badge-warning'">
                   {{ contact.sent ? 'Enviado' : 'Pendiente' }}
                 </span>
+            </td>
+            <td class="text-center">
+              <input type="checkbox" [checked]="contact.sent" (change)="toggleSent(contact)" class="form-check-input">
             </td>
             <td class="actions">
               <button class="btn btn-primary btn-sm" (click)="sendMessage(contact)" title="Enviar por WhatsApp">
